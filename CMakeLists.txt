@@ -1,0 +1,19 @@
+file(GLOB_RECURSE MAKALU_SDK_SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/can/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/ota/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/flash/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/config/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/diag/*.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/util/*.c
+)
+
+add_library(makalu_sdk STATIC ${MAKALU_SDK_SOURCES})
+
+target_include_directories(makalu_sdk PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/can
+    ${CMAKE_CURRENT_SOURCE_DIR}/ota
+    ${CMAKE_CURRENT_SOURCE_DIR}/flash
+    ${CMAKE_CURRENT_SOURCE_DIR}/config
+    ${CMAKE_CURRENT_SOURCE_DIR}/diag
+    ${CMAKE_CURRENT_SOURCE_DIR}/util
+)
