@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.22)
+
 file(GLOB_RECURSE MAKALU_SDK_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/can/*.c
     ${CMAKE_CURRENT_SOURCE_DIR}/ota/*.c
