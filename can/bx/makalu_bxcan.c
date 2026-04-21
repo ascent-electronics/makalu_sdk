@@ -42,7 +42,7 @@ static bool buf_empty(void) {
  return s_rx_head == s_rx_tail;
 }
 
-// configures bxcan peripheral via HAL
+// configures bxcan peripheral
 // implements a filter with all msg passthrough
 // impl HAL_CAN_Start() - moves periph to normal operating mode
 // Enabled FIFO0 message pending int, when a frame arrives in FIFO0,
