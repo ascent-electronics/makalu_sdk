@@ -126,6 +126,7 @@ void makalu_bxcan_rx_isr(void) {
  f->id = h.ExtId;
  f->len = h.DLC; // data bytes
  s_rx_head = buf_next(s_rx_head);
+
 }
 
 // this method gets called from the main loop.

@@ -33,10 +33,11 @@
 // Define message IDS
 
 //system
-#define MAKALU_MSG_BROADCAST 0x01 // Message that all modules respond to with their node id
+#define MAKALU_MSG_HEARTBEAT 0x01 // Message that all modules respond to with their node id
 #define MAKALU_MSG_PING 0x02 // Message response request from interface to module
 #define MAKALU_MSG_PONG 0x03 // Module responds with PONG when receives PING
 #define MAKALU_MSG_STATU 0x06 // Module responds with SW/FW/BL version, operation state, etc
+#define MAKALU_MSG_COMMISSIONED 0x06C
 
 // PDM SPECIFIC
 #define MAKALU_MSG_PDM_SW_S1 0x04 // Switch on PDM channel (state 1)
@@ -63,7 +64,8 @@
 #define MAKALU_MSG_CDG_ACK 0x84 // Successful operation
 #define MAKALU_MSG_CDG_NACK 0x85 // Unsuccessful operation
 
-
+#define MAKALU_MSG_CDG_WRITE_CHUNK  0x86  /* Chunked write for multi-byte registers */
+#define MAKALU_MSG_CDG_WRITE_END    0x87
 
 
 #endif //MAKALU_SDK_FDCAN_IDS_H
